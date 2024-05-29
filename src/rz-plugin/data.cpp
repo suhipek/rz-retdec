@@ -161,7 +161,7 @@ Function RizinDatabase::fetchSeekedFunction() const
  */
 void RizinDatabase::fetchFunctionsAndGlobals(Config &rzconfig) const
 {
-	auto list = rz_analysis_get_fcns(_rzcore.analysis);
+	auto list = rz_analysis_function_list(_rzcore.analysis);
 	if (list != nullptr) {
 		FunctionContainer functions;
 		for (RzListIter *it = list->head; it; it = rz_list_iter_get_next(it)) {
